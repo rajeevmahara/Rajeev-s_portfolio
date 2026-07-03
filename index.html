@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Rajeev Mahara — Frontend Developer portfolio. HTML, CSS, JavaScript & React projects.">
+<title>Rajeev Mahara | Frontend Developer</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ SCROLL PROGRESS ============ -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+    <div class="nav-inner">
+        <a href="#home" class="brand">Rajeev<span class="brand-dot">.</span></a>
+
+        <nav class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="nav-right">
+            <a href="#contact" class="btn btn-primary nav-cta magnetic">Hire Me</a>
+            <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section id="home" class="hero">
+
+    <!-- 🎥 ADD YOUR VIDEO HERE: replace videos/hero-bg.mp4 -->
+    <video class="hero-video" autoplay muted loop playsinline>
+        <source src="video/28781-372045658_medium.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-inner">
+        <div class="hero-text">
+            <span class="terminal-chip">
+                <i class="fa-solid fa-terminal"></i>
+                <span class="terminal-prompt">whoami</span>
+                <span class="terminal-role" id="roleRotator">Frontend Developer</span><span class="terminal-cursor"></span>
+            </span>
+            <h1 class="hero-heading">Building clean, <span>fast</span> web experiences.</h1>
+            <p class="hero-sub">I'm Rajeev Mahara — I design and build responsive websites and interfaces using HTML, CSS, JavaScript and React. Focused on clean code and smooth user experience.</p>
+
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
+                <a href="asset\Rajeev_Mahara_CV.pdf" class="btn btn-outline magnetic" download>
+                    <i class="fa-solid fa-download"></i> Resume
+                </a>
+            </div>
+
+            <div class="hero-socials">
+                <a href="https://github.com/rajeevmahara" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rajeev-mahara" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/rakuu_mahara/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-photo">
+            <div class="editor-frame" id="tiltFrame">
+                <div class="editor-body">
+                    <!-- 🖼️ ADD YOUR PHOTO HERE: replace images/profile.jpg -->
+                    <img src="image/DSCN1790.remini-enhanced.jpg" alt="Rajeev Mahara" onerror="this.style.display='none'; this.parentElement.parentElement.classList.add('photo-empty')">
+                </div>
+            </div>
+            <span class="frame-tag">&lt;/&gt; dev</span>
+        </div>
+    </div>
+
+    <div class="scroll-cue">
+        <span></span> scroll
+    </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section id="about" class="section">
+    <div class="section-inner about-grid reveal">
+        <div class="about-copy">
+            <span class="eyebrow">About Me</span>
+            <h2>A little about how I work.</h2>
+            <p>I'm a self-taught frontend developer based in Ranikhet, Uttarakhand. I enjoy turning ideas into responsive, easy-to-use interfaces — from small landing pages to full interactive apps.</p>
+            <p>I'm currently sharpening my skills across HTML, CSS, JavaScript, React and Node.js, and I'm always working on a new personal project to learn something practical.</p>
+        </div>
+
+        <div class="about-cards">
+            <div class="info-card">
+                <i class="fa-solid fa-bullseye"></i>
+                <h3>Focus</h3>
+                <p>Responsive layouts, clean code, and interfaces that feel effortless to use.</p>
+            </div>
+            <div class="info-card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h3>Based in</h3>
+                <p>Ranikhet, Uttarakhand, India — open to remote work.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section id="skills" class="section section-alt">
+    <div class="section-inner reveal">
+        <div class="section-head">
+            <span class="eyebrow">Skills</span>
+            <h2>Tools I build with.</h2>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-chip"><i class="fa-brands fa-html5"></i><span>HTML5</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-css3-alt"></i><span>CSS3</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-js"></i><span>JavaScript</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-react"></i><span>React</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-node-js"></i><span>Node.js</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-git-alt"></i><span>Git</span></div>
+            <div class="skill-chip"><i class="fa-brands fa-figma"></i><span>Figma</span></div>
+            <div class="skill-chip"><i class="fa-solid fa-code"></i><span>VS Code</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PROJECTS ============ -->
+<section id="projects" class="section">
+    <div class="section-inner reveal">
+        <div class="section-head">
+            <span class="eyebrow">Projects</span>
+            <h2>Things I've built.</h2>
+        </div>
+
+        <div class="projects-grid">
+
+            <article class="project-card">
+                <div class="project-media">
+                    <!-- 🖼️ ADD PROJECT IMAGE HERE -->
+                    <img src="images/project1.jpg" alt="Todo Dashboard" onerror="this.style.display='none'; this.parentElement.classList.add('media-empty')">
+                </div>
+                <div class="project-body">
+                    <h3>Todo List Dashboard</h3>
+                    <p>A premium multi-file todo app with dark mode, priority tags and a progress ring.</p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media">
+                    <img src="images/project2.jpg" alt="Portfolio Website" onerror="this.style.display='none'; this.parentElement.classList.add('media-empty')">
+                </div>
+                <div class="project-body">
+                    <h3>Personal Portfolio</h3>
+                    <p>A responsive portfolio site with smooth scroll animations and dark theme.</p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media">
+                    <img src="images/project3.jpg" alt="Calculator App" onerror="this.style.display='none'; this.parentElement.classList.add('media-empty')">
+                </div>
+                <div class="project-body">
+                    <h3>Calculator App</h3>
+                    <p>A clean calculator built with vanilla JavaScript logic and event handling.</p>
+                    <div class="tags">
+                        <span>JavaScript</span><span>CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card">
+                <div class="project-media">
+                    <img src="images/project4.jpg" alt="Benefit Battle Arena" onerror="this.style.display='none'; this.parentElement.classList.add('media-empty')">
+                </div>
+                <div class="project-body">
+                    <h3>Benefit Battle Arena</h3>
+                    <p>Real-time multiplayer HR benefits game — teams compete to build the best benefits package within budget, with an admin panel, live leaderboard and Firebase Realtime sync.</p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/rajeevmahara/benefit-battle-arena" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="https://rajeevmahara.github.io/benefit-battle-arena/" target="_blank" rel="noopener noreferrer">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section id="contact" class="section section-alt">
+    <div class="section-inner contact-grid reveal">
+        <div class="contact-info">
+            <span class="eyebrow">Contact</span>
+            <h2>Let's work together.</h2>
+            <p>Have a project in mind or just want to say hi? My inbox is always open.</p>
+
+            <div class="contact-item"><i class="fa-solid fa-envelope"></i> <a href="mailto:mahararajeev5@gmail.com">mahararajeev5@gmail.com</a></div>
+            <div class="contact-item"><i class="fa-solid fa-location-dot"></i> Ranikhet, Uttarakhand</div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <p class="form-status" id="formStatus"></p>
+        </form>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <!-- 🖼️ ADD FOOTER BACKGROUND IMAGE HERE: replace images/footer-bg.jpg in CSS -->
+    <div class="footer-overlay"></div>
+    <div class="footer-inner">
+        <a href="#home" class="brand">Rajeev<span class="brand-dot">.</span></a>
+        <p>|| अंतः अस्ति प्रारंभ ||</p>
+        <div class="footer-socials">
+            <a href="https://github.com/rajeevmahara" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/rajeev-mahara" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.instagram.com/rakuu_mahara/?hl=en" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+        <button class="back-to-top" id="backToTop" aria-label="Back to top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
