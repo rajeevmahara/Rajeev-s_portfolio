@@ -5,9 +5,10 @@ Welcome to my personal portfolio repository! This project showcases my skills, p
 
 ## 🚀 Live Demo
 
-**Coming Soon...**
+portfolio link : https://rajeev-portfoli.netlify.app/
 
-The portfolio will be deployed soon.
+
+ portfolio is deployed 
 
 ---
 
