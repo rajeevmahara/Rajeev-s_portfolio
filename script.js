@@ -164,3 +164,23 @@ if (window.matchMedia("(hover: hover)").matches) {
         });
     });
 }
+
+/* ============ PROJECT CARDS: FEATURES / CHALLENGES / LEARNINGS TOGGLE ============ */
+document.querySelectorAll(".details-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const details = btn.closest(".project-body").querySelector(".project-details");
+        const isOpen = details.classList.contains("open");
+
+        if (isOpen) {
+            details.style.maxHeight = "0px";
+            details.classList.remove("open");
+            btn.setAttribute("aria-expanded", "false");
+            btn.querySelector("span").textContent = "View Details";
+        } else {
+            details.classList.add("open");
+            details.style.maxHeight = details.scrollHeight + "px";
+            btn.setAttribute("aria-expanded", "true");
+            btn.querySelector("span").textContent = "Hide Details";
+        }
+    });
+});

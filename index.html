@@ -57,12 +57,12 @@
                 <span class="terminal-prompt">whoami</span>
                 <span class="terminal-role" id="roleRotator">Frontend Developer</span><span class="terminal-cursor"></span>
             </span>
-            <h1 class="hero-heading">Building clean, <span>fast</span> web experiences.</h1>
+            <h1 class="hero-heading">Building clean, <span class="gradient-word">fast</span> web experiences.</h1>
             <p class="hero-sub">I'm Rajeev Mahara — I design and build responsive websites and interfaces using HTML, CSS, JavaScript and React. Focused on clean code and smooth user experience.</p>
 
             <div class="hero-actions">
                 <a href="#projects" class="btn btn-primary magnetic">View Projects</a>
-                <a href="asset\Rajeev_Mahara_CV.pdf" class="btn btn-outline magnetic" download>
+                <a href="asset/Rajeev_Mahara_CV.pdf" class="btn btn-outline magnetic" download>
                     <i class="fa-solid fa-download"></i> Resume
                 </a>
             </div>
@@ -89,6 +89,17 @@
         <span></span> scroll
     </div>
 </section>
+
+<!-- ============ TECH ICON BACKGROUND — starts only after hero, never overlaps header/video ============ -->
+<div class="site-tech-bg" aria-hidden="true">
+    <i class="fa-brands fa-html5 fi-html"></i>
+    <i class="fa-brands fa-css3-alt fi-css"></i>
+    <i class="fa-brands fa-js fi-js"></i>
+    <i class="fa-brands fa-react fi-react"></i>
+    <i class="fa-brands fa-python fi-python"></i>
+    <i class="fa-brands fa-git-alt fi-git"></i>
+    <i class="fa-brands fa-github fi-github"></i>
+</div>
 
 <!-- ============ ABOUT ============ -->
 <section id="about" class="section">
@@ -150,16 +161,48 @@
                 <div class="project-media">
                     <!-- 🖼️ ADD PROJECT IMAGE HERE -->
                     <img src="images/project1.jpg" alt="Todo Dashboard" onerror="this.style.display='none'; this.parentElement.classList.add('media-empty')">
+                    <span class="project-tag-float">Web App</span>
                 </div>
                 <div class="project-body">
                     <h3>Todo List Dashboard</h3>
-                    <p>A premium multi-file todo app with dark mode, priority tags and a progress ring.</p>
+                    <p class="project-desc">A premium multi-file todo app with dark mode, priority tags and a progress ring.</p>
                     <div class="tags">
                         <span>HTML</span><span>CSS</span><span>JavaScript</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="#">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-bolt"></i> Features</h4>
+                            <ul>
+                                <li>Priority tags with color-coded urgency levels</li>
+                                <li>Animated SVG progress ring for daily completion</li>
+                                <li>Dark mode with saved theme preference</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> Challenges</h4>
+                            <ul>
+                                <li>Keeping state in sync across multiple JS files without a framework</li>
+                                <li>Building a smooth drag-free reorder using vanilla event listeners</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-graduation-cap"></i> Learnings</h4>
+                            <ul>
+                                <li>Structuring vanilla JS into clean, modular files</li>
+                                <li>Designing UI state that scales without a state library</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <button class="details-toggle" aria-expanded="false">
+                            <span>View Details</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="project-links">
+                            <a href="#" class="project-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="project-btn primary">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -167,16 +210,48 @@
             <article class="project-card">
                 <div class="project-media">
                     <img src="images/project2.jpg" alt="Portfolio Website" onerror="this.style.display='none'; this.parentElement.classList.add('media-empty')">
+                    <span class="project-tag-float">Portfolio</span>
                 </div>
                 <div class="project-body">
                     <h3>Personal Portfolio</h3>
-                    <p>A responsive portfolio site with smooth scroll animations and dark theme.</p>
+                    <p class="project-desc">A responsive portfolio site with smooth scroll animations and dark theme.</p>
                     <div class="tags">
                         <span>HTML</span><span>CSS</span><span>JS</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="#">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-bolt"></i> Features</h4>
+                            <ul>
+                                <li>Glassmorphic sticky navbar with scroll progress bar</li>
+                                <li>IntersectionObserver-driven scroll reveal animations</li>
+                                <li>Magnetic buttons and a tilt-effect photo frame</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> Challenges</h4>
+                            <ul>
+                                <li>Getting animations to feel premium without a heavy library</li>
+                                <li>Balancing a video hero with fast load times</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-graduation-cap"></i> Learnings</h4>
+                            <ul>
+                                <li>Fine-tuning micro-interactions with pure CSS + JS</li>
+                                <li>Designing a consistent visual language end-to-end</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <button class="details-toggle" aria-expanded="false">
+                            <span>View Details</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="project-links">
+                            <a href="https://github.com/rajeevmahara/Rajeev-s_portfolio" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://rajeev-portfoli.netlify.app/" target="_blank" rel="noopener noreferrer" class="project-btn primary">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -184,16 +259,47 @@
             <article class="project-card">
                 <div class="project-media">
                     <img src="images/project3.jpg" alt="Calculator App" onerror="this.style.display='none'; this.parentElement.classList.add('media-empty')">
+                    <span class="project-tag-float">Utility</span>
                 </div>
                 <div class="project-body">
                     <h3>Calculator App</h3>
-                    <p>A clean calculator built with vanilla JavaScript logic and event handling.</p>
+                    <p class="project-desc">A clean calculator built with vanilla JavaScript logic and event handling.</p>
                     <div class="tags">
                         <span>JavaScript</span><span>CSS</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="#">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-bolt"></i> Features</h4>
+                            <ul>
+                                <li>Full keyboard support alongside on-screen buttons</li>
+                                <li>Handles chained operations and decimal precision correctly</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> Challenges</h4>
+                            <ul>
+                                <li>Avoiding floating-point rounding errors in JS math</li>
+                                <li>Handling edge cases like divide-by-zero gracefully</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-graduation-cap"></i> Learnings</h4>
+                            <ul>
+                                <li>Writing predictable event-driven logic from scratch</li>
+                                <li>Thinking through edge cases before writing UI code</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <button class="details-toggle" aria-expanded="false">
+                            <span>View Details</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="project-links">
+                            <a href="#" class="project-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="#" class="project-btn primary">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
                     </div>
                 </div>
             </article>
@@ -201,16 +307,48 @@
             <article class="project-card">
                 <div class="project-media">
                     <img src="images/project4.jpg" alt="Benefit Battle Arena" onerror="this.style.display='none'; this.parentElement.classList.add('media-empty')">
+                    <span class="project-tag-float">Multiplayer Game</span>
                 </div>
                 <div class="project-body">
                     <h3>Benefit Battle Arena</h3>
-                    <p>Real-time multiplayer HR benefits game — teams compete to build the best benefits package within budget, with an admin panel, live leaderboard and Firebase Realtime sync.</p>
+                    <p class="project-desc">Real-time multiplayer HR benefits game — teams compete to build the best benefits package within budget, with an admin panel, live leaderboard and Firebase Realtime sync.</p>
                     <div class="tags">
                         <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Firebase</span>
                     </div>
-                    <div class="project-links">
-                        <a href="https://github.com/rajeevmahara/benefit-battle-arena" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Code</a>
-                        <a href="https://rajeevmahara.github.io/benefit-battle-arena/" target="_blank" rel="noopener noreferrer">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+
+                    <div class="project-details">
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-bolt"></i> Features</h4>
+                            <ul>
+                                <li>Real-time state sync across all players via Firebase Realtime Database</li>
+                                <li>Admin panel to control rounds and budgets live</li>
+                                <li>Live leaderboard that updates instantly for every team</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-triangle-exclamation"></i> Challenges</h4>
+                            <ul>
+                                <li>Keeping multiple clients in sync without race conditions</li>
+                                <li>Designing a Firebase data structure that scales with more teams</li>
+                            </ul>
+                        </div>
+                        <div class="detail-block">
+                            <h4><i class="fa-solid fa-graduation-cap"></i> Learnings</h4>
+                            <ul>
+                                <li>Working hands-on with a real-time database in production</li>
+                                <li>Building multiplayer logic without a game framework</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="project-footer">
+                        <button class="details-toggle" aria-expanded="false">
+                            <span>View Details</span> <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div class="project-links">
+                            <a href="https://github.com/rajeevmahara/benefit-battle-arena" target="_blank" rel="noopener noreferrer" class="project-btn"><i class="fa-brands fa-github"></i> Code</a>
+                            <a href="https://rajeevmahara.github.io/benefit-battle-arena/" target="_blank" rel="noopener noreferrer" class="project-btn primary">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
                     </div>
                 </div>
             </article>
