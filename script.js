@@ -72,9 +72,27 @@ backToTop.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-/* ============ CONTACT FORM VALIDATION ============ */
+/* ============ CONTACT FORM — REAL SENDING VIA EMAILJS ============ */
+/*
+  SETUP STEPS (one-time, ~5 minutes):
+  1. Go to https://www.emailjs.com/ and create a free account.
+  2. Add an Email Service (e.g. Gmail) -> copy the SERVICE ID.
+  3. Create an Email Template with variables: {{name}}, {{email}}, {{message}} -> copy the TEMPLATE ID.
+  4. Go to Account -> General -> copy your PUBLIC KEY.
+  5. Paste all three values below in place of the placeholders.
+*/
+const EMAILJS_PUBLIC_KEY = "_qG1ALgoCFyHUjXl_";
+const EMAILJS_SERVICE_ID = "service_zluwiac";
+const EMAILJS_TEMPLATE_ID = "template_dkf02cn";
+
+if (window.emailjs) {
+    emailjs.init(EMAILJS_PUBLIC_KEY);
+}
+
 const contactForm = document.getElementById("contactForm");
 const formStatus = document.getElementById("formStatus");
+const submitBtn = contactForm.querySelector("button[type='submit']");
+const submitBtnDefaultText = submitBtn.textContent;
 
 contactForm.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -96,11 +114,30 @@ contactForm.addEventListener("submit", (e) => {
         return;
     }
 
-    // NOTE: this only validates the form. To actually send messages,
-    // connect this to EmailJS or your own backend endpoint here.
-    formStatus.textContent = "Message sent! I'll get back to you soon.";
-    formStatus.style.color = "#f2b25c";
-    contactForm.reset();
+    if (EMAILJS_PUBLIC_KEY === "YOUR_PUBLIC_KEY") {
+        formStatus.textContent = "Contact form isn't fully set up yet — EmailJS keys are missing.";
+        formStatus.style.color = "#e07b7b";
+        return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+    formStatus.textContent = "";
+
+    emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, { name, email, message })
+        .then(() => {
+            formStatus.textContent = "Message sent! I'll get back to you soon.";
+            formStatus.style.color = "#f2b25c";
+            contactForm.reset();
+        })
+        .catch(() => {
+            formStatus.textContent = "Something went wrong. Please try again or email me directly.";
+            formStatus.style.color = "#e07b7b";
+        })
+        .finally(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = submitBtnDefaultText;
+        });
 });
 
 /* ============ HERO: ROLE ROTATOR (type / delete loop) ============ */
